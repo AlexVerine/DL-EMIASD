@@ -1,0 +1,109 @@
+% Copyright (c) 2022 by Lars Spreng
+% This work is licensed under the Creative Commons Attribution 4.0 International License. 
+% To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/ or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% You can add your packages and commands to the loadslides.tex file. 
+% The files in the folder "styles" can be modified to change the layout and design of your slides.
+% I have included examples on how to use the template below. 
+% Some of it these examples are taken from the Metropolis template.
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+\documentclass[
+11pt,notheorems,hyperref={pdfauthor=whatever}
+]{beamer}
+\usepackage{float}
+\usepackage[center]{subfigure}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{amsthm}
+
+\input{loadslides.tex} % Loads packages and some defined commands
+
+\title[
+Introduction to Deep Learning: Excutive Master - IASD
+]{Dive into Deep Learning: A Comprehensive Introduction}
+
+\subtitle{From AI Fundamentals to Cutting-Edge Deep Learning Techniques}
+
+\author[
+Alexandre V\'erine
+]{
+    Alexandre Vérine,\\
+    Research Fellow, ENS-PSL\\
+    Universit\'e PSL\\
+    \url{www.alexverine.com}
+}
+
+\institute{
+Executive Master IASD\\
+    Universit\'e Paris-Dauphine, PSL}
+\date{\today}
+
+\begin{document}
+
+% Generate title page
+{
+\setbeamertemplate{footline}{}
+\begin{frame}
+    \titlepage
+\end{frame}
+
+
+\begin{frame}{Outline}
+    Schedule :
+    \begin{itemize}
+        \item Monday 13th of October Evenning : From Fundamentals to Deep Learning + TP1 Introduction to PyTorch and basic Neural Networks
+        \item Tuesday 14th of October Morning : End of TP1, CNNs and applications
+        \item Tuesday 14th of October Afternoon : Deep Learning in Action: From Neural Networks to Transformer Models + TP 2 Train an Autoencoder.
+        \item Tuesday 13th of January Morning : Techniques to Improve Deep Learning Training, + TP3 Image Segmentation with U-Net
+        \item Tuesday 13th of January Afternoon : TP 4 Generative Adversarial Networks
+    \end{itemize}
+\end{frame}
+
+
+
+}
+\addtocounter{framenumber}{-2}
+
+% You can declare different parts as a parentof sections
+\begin{frame}{AI 101: From Fundamentals to Deep Learning}
+    \tableofcontents[part=1]
+\end{frame}
+\begin{frame}{Deep Learning in Action: From Neural Networks to Transformer Models}
+    \tableofcontents[part=2]
+\end{frame}
+\begin{frame}{Techniques to Improve Deep Learning Training}
+    \tableofcontents[part=3]
+\end{frame}
+
+% \begin{frame}{Deep Learning and Applications}
+%     \tableofcontents[part=4]
+% \end{frame}
+
+\begin{frame}{Your turn: Hands-on Deep Learning}
+    \tableofcontents[part=4]
+\end{frame}
+
+
+
+
+\input{part1.tex}
+
+\input{part2.tex}
+
+\input{part3.tex}
+
+% \input{part4.tex}
+
+\input{part5.tex}
+
+% \begin{frame}[allowframebreaks]{References}
+%     \printbibliography
+% \end{frame}
+\end{document}

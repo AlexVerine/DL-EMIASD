@@ -1,0 +1,172 @@
+
+\makepart{Demo Part}
+
+\section{Introduction}
+\begin{frame}
+\begin{itemize}
+    \item This template provides an elegant and minimalistic layout for beamer slides. Hence the name \alert{\textbf{Elegant Slides}}.
+    \item I created Elegant Slides because I wasn't satisfied with any of the existing Beamer templates, which look slightly different than Elegant Slides.
+    \item My goal was to create a layout that is \alert{\textbf{simplistic but beautiful}} and focuses on the content, rather than crowding each slide with lots of different coloured boxes.
+    \item I designed Elegant Slides for \alert{\textbf{lecture notes and technical presentations}} but it can be used for any kind of talk. 
+\end{itemize}
+     
+\end{frame}
+
+\subsection{Frames}
+\begin{frame}
+    Unless the user enters their own custom frame titles and subtitles, Elegant Slides automatically inserts the section title and, if specified, the subsection title as frame titles and frame subtitles.
+\end{frame}
+
+\begin{frame}{}{Custom Subsection}
+    This frame has a custom subtitle. The frame title is automatically inserted and corresponds to the section title.
+\end{frame}
+
+\begin{frame}{Custom Title}{Custom Subsection with Footnote}
+    This frame has a custom title and a custom subtitle.\footnote{This is a footnote. See also \textcite{behrmann_invertible_2019}. }
+\end{frame}
+
+\subsection{Typographics}
+\begin{frame}
+    These examples follow the Metropolis Theme
+    \begin{itemize}
+        \item Regular
+        \item \alert{Alert}
+        \item \textit{Italic}
+        \item \textbf{Bold}
+    \end{itemize}
+\end{frame}
+
+\subsection{Lists}
+
+\begin{frame}
+    \begin{columns}[T,onlytextwidth]
+    \column{0.33\textwidth}
+      \textbf{Items}
+      \begin{itemize}
+        \item Cats 
+        \begin{itemize}
+            \item British Shorthair
+        \end{itemize}
+        \item Dogs \item Birds
+      \end{itemize}
+
+    \column{0.33\textwidth}
+      \textbf{Enumerations}
+      \begin{enumerate}
+        \item First 
+        \begin{enumerate}
+            \item First subpoint
+        \end{enumerate}
+        \item Second \item Last
+      \end{enumerate}
+
+    \column{0.33\textwidth}
+      \textbf{Descriptions}
+      \begin{description}
+        \item[Apples] Yes \item[Oranges] No \item[Grappes] No
+      \end{description}
+\end{columns}
+\end{frame}
+
+\subsection{Table}
+\begin{frame}
+    \begin{table}
+        \caption{Largest cities in the world (source: Wikipedia)}
+        \begin{tabular}{@{} lr @{}}
+          \toprule
+          City & Population\\
+          \midrule
+          Mexico City & 20,116,842\\
+          Shanghai & 19,210,000\\
+          Peking & 15,796,450\\
+          Istanbul & 14,160,467\\
+          \bottomrule
+        \end{tabular}
+        \hspace*{1cm}
+            \setlength\extrarowheight{3pt}
+        \begin{tabular}{|lr|}
+          \hline
+          \rowcolor{primary}\color{white}City & \color{white}Population\\
+          \hline
+          Mexico City & 20,116,842\\
+          Shanghai & 19,210,000\\
+          Peking & 15,796,450\\
+          Istanbul & 14,160,467\\
+          \hline
+        \end{tabular}
+    \end{table}
+\end{frame}
+
+\subsection{Blocks}
+\begin{frame}
+
+   \centering
+	\begin{minipage}[b]{0.5\textwidth}
+
+	  \begin{block}{Default}
+        Block content.
+      \end{block}
+
+      \begin{alertblock}{Alert}
+        Block content.
+      \end{alertblock}
+
+      \begin{exampleblock}{Example}
+        Block content.
+      \end{exampleblock}      
+      
+	\end{minipage}	
+\end{frame}
+
+\section{Maths}
+\subsection{Equations}
+\begin{frame}
+    \begin{itemize}
+        \item A numbered equation:
+        \begin{equation}
+            y_t = \beta x_t + \varepsilon_t
+        \end{equation}
+         \item Another equation:
+        \begin{equation*}
+            \mathbf{Y} = \boldsymbol{\beta} \mathbf{X} + \boldsymbol{\varepsilon}_t
+        \end{equation*}
+    \end{itemize}
+\end{frame}
+
+\subsection{Theorem}
+\begin{frame}
+    \begin{itemize}
+        \item Theorems are numbered consecutively.
+    \end{itemize}
+    \begin{theorem}[Example Theorem]
+         Given a discrete random variable X, which takes values in the alphabet $\mathcal{X}$ and is distributed according to  $p:{\mathcal {X}}\to [0,1]$:
+            \begin{equation}
+                \mathrm {H} (X):=-\sum _{x\in {\mathcal {X}}}p(x)\log p(x)=\mathbb {E} [-\log p(X)]
+            \end{equation}
+    \end{theorem}
+\end{frame}
+
+\begin{frame}{}{Definitions}
+    \begin{itemize}
+        \item Definition numbers are prefixed by the section number in the respective part.
+    \end{itemize}
+     \begin{definition}[Example Definition]
+         Given a discrete random variable X, which takes values in the alphabet $\mathcal{X}$ and is distributed according to  $p:{\mathcal {X}}\to [0,1]$:
+            \begin{equation}
+                \mathrm {H} (X):=-\sum _{x\in {\mathcal {X}}}p(x)\log p(x)=\mathbb {E} [-\log p(X)]
+            \end{equation}
+    \end{definition}
+\end{frame}
+
+\begin{frame}{}{Examples}
+    \begin{itemize}
+        \item Examples are numbered as definitions.
+    \end{itemize}
+    \begin{examp}[Example Theorem]
+         Given a discrete random variable X, which takes values in the alphabet $\mathcal{X}$ and is distributed according to  $p:{\mathcal {X}}\to [0,1]$:
+            \begin{equation}
+                \mathrm {H} (X):=-\sum _{x\in {\mathcal {X}}}p(x)\log p(x)=\mathbb {E} [-\log p(X)]
+            \end{equation}
+    \end{examp}
+\end{frame}
+
